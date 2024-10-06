@@ -44,7 +44,7 @@ export default function UserUpgrades({
 
               <img src={imageIndex[index]} className="upgradeThumbnail" />
               <div className="nameContainer">
-                <p>upgrade name: {item.name}</p>
+                <p>{item.name}</p>
               </div>
               <div className="increaseContainer">
                 <p>&#10506;C {item.increase}</p>

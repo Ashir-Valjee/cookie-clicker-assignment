@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { getLocalStorage, updateLocalStorage } from "../utils/utilities";
+import gameBonus from "../../public/audio/gameBonus.mp3";
 
 import "./RenderUpgrades.css";
 
@@ -16,6 +17,7 @@ export default function RenderUpgrades({
   const upgradesURL = "https://cookie-upgrade-api.vercel.app/api/upgrades";
   // const [items, setItems] = useState([]);
   // const [isVisible, setIsVisible] = useState(false);
+  const gameBonusSound = new Audio(gameBonus);
 
   useEffect(() => {
     async function fetchData() {
@@ -28,6 +30,7 @@ export default function RenderUpgrades({
   }, []);
 
   function handleUpgrades(cost, increase, index) {
+    gameBonusSound.play();
     setCookies((currentCookies) => currentCookies - cost);
     setCookiesPerSecond(
       (currentCookiesPerSecond) => currentCookiesPerSecond + increase
@@ -45,7 +48,7 @@ export default function RenderUpgrades({
           {cookies > item.cost ? (
             <>
               <div className="nameContainer">
-                <p>upgrade name: {item.name}</p>
+                <p>{item.name}</p>
               </div>
               <div className="costContainer">
                 <p>&#36;C {item.cost}</p>
@@ -55,11 +58,12 @@ export default function RenderUpgrades({
               </div>
               <div>
                 <button
+                  className="buyButton"
                   onClick={() =>
                     handleUpgrades(item.cost, item.increase, index)
                   }
                 >
-                  upgrade
+                  Buy
                 </button>
               </div>
             </>

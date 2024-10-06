@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { getLocalStorage, updateLocalStorage } from "../utils/utilities";
+
 export default function ({
   cookies,
   setCookies,

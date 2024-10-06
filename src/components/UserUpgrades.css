@@ -4,9 +4,9 @@
   align-items: center;
 
   justify-content: space-between;
-  border-style: solid;
+  /* border-style: solid;
   border-color: peachpuff;
-  border-width: 1px;
+  border-width: 1px; */
   padding: 0.5rem;
 }
 
@@ -21,24 +21,24 @@
 
 .inventoryContainer {
   width: 100px;
-  border-color: black;
+  /* border-color: black;
   border-width: 2px;
-  border-style: solid;
+  border-style: solid; */
   padding: 0.1rem;
 }
 .nameContainer {
-  width: 300px;
-  border-color: black;
+  width: 180px;
+  /* border-color: black;
   border-width: 2px;
-  border-style: solid;
+  border-style: solid; */
   padding: 0.1rem;
 }
 
 .increaseContainer {
   width: 75px;
-  border-color: black;
+  /* border-color: black;
   border-width: 2px;
-  border-style: solid;
+  border-style: solid; */
   padding: 0.1rem;
 }
 

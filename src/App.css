@@ -11,9 +11,7 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(10, 1fr);
   gap: 10px;
-  border-style: solid;
-  border-width: 3px;
-  border-color: blueviolet;
+
   min-height: 100vh;
 }
 
@@ -25,9 +23,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-style: none;
+  border-style: solid;
   border-width: 3px;
-  border-color: pink;
+  border-color: palegoldenrod;
   background-color: #fceed1;
   font-size: 3rem;
   font-weight: 700;
@@ -43,7 +41,7 @@ header {
   justify-content: space-evenly;
   border-style: solid;
   border-width: 3px;
-  border-color: blueviolet;
+  border-color: palegoldenrod;
   border-radius: 1rem;
   margin-left: 10px;
   padding: 5px;
@@ -53,10 +51,10 @@ header {
   grid-column-start: 3;
   grid-column-end: 5;
   grid-row-start: 2;
-  grid-row-end: 6;
+  grid-row-end: 7;
   border-style: solid;
   border-width: 3px;
-  border-color: greenyellow;
+  border-color: palegoldenrod;
   border-radius: 1rem;
   padding: 5px;
   margin-right: 10px;
@@ -65,11 +63,11 @@ header {
 #main-render-upgrades-container {
   grid-column-start: 3;
   grid-column-end: 5;
-  grid-row-start: 6;
+  grid-row-start: 7;
   grid-row-end: 10;
   border-style: solid;
   border-width: 3px;
-  border-color: blue;
+  border-color: palegoldenrod;
   border-radius: 1rem;
   padding: 5px;
   margin-right: 10px;
@@ -83,12 +81,79 @@ footer {
   /* position: absolute; */
   border-style: solid;
   border-width: 3px;
-  border-color: pink;
+  border-color: palegoldenrod;
   /* bottom: 0; */
   /* width: 100%; */
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background-color: peachpuff;
+  background-color: #fceed1;
+  gap: 20px;
+}
+
+#github-logo {
+  width: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+#github-logo:hover {
+  width: 25px;
+}
+
+@media (max-width: 910px) {
+  #main-image-container {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  #main-user-upgrades-container {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 10;
+  }
+
+  #main-render-upgrades-container {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 10;
+  }
+}
+
+@media (max-width: 620px) {
+  #main-image-container {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  #main-render-upgrades-container {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 6;
+  }
+
+  #main-user-upgrades-container {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 10;
+  }
+}
+
+header {
+  font-size: 2rem;
 }
