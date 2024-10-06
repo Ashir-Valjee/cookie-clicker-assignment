@@ -9,6 +9,7 @@ import quantumOven from "../../public/images/quantumOven.jpg";
 import alienTechnology from "../../public/images/alienTechnology.jpg";
 import interdimensionalBaker from "../../public/images/interdimensionalBaker.jpg";
 import "./UserUpgrades.css";
+import { formatNumber } from "../utils/utilities";
 
 export default function UserUpgrades({
   cookies,
@@ -47,7 +48,7 @@ export default function UserUpgrades({
                 <p>{item.name}</p>
               </div>
               <div className="increaseContainer">
-                <p>&#10506;C {item.increase}</p>
+                <p>&#10506;C {formatNumber(item.increase * upgrades[index])}</p>
               </div>
             </>
           ) : null}

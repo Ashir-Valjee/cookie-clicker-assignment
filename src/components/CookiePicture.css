@@ -3,6 +3,9 @@
   /* animation: rotation 2s infinite linear; */
   cursor: pointer;
   transition: 0.7s;
+  /* took the below styling from stack overflow */
+  -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
 }
 
 #cookie-image:hover {

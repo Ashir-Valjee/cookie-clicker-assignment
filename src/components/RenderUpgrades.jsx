@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { getLocalStorage, updateLocalStorage } from "../utils/utilities";
 import gameBonus from "../../public/audio/gameBonus.mp3";
+import { formatNumber } from "../utils/utilities";
 
 import "./RenderUpgrades.css";
 
@@ -51,10 +52,10 @@ export default function RenderUpgrades({
                 <p>{item.name}</p>
               </div>
               <div className="costContainer">
-                <p>&#36;C {item.cost}</p>
+                <p>&#36;C {formatNumber(item.cost)}</p>
               </div>
               <div className="increaseContainer">
-                <p>&#10506;C {item.increase}</p>
+                <p>&#10506;C {formatNumber(item.increase)}</p>
               </div>
               <div>
                 <button

@@ -21,7 +21,9 @@ export default function App() {
   // dynamically update title bar
 
   useEffect(() => {
-    document.title = `Cookie Clicker: ${formatNumber(cookies)} cookies eaten`;
+    document.title = `Cookie Clicker v2.1: ${formatNumber(
+      cookies
+    )} cookies eaten`;
   }, [{ cookies }]);
 
   return (
