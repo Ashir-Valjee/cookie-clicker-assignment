@@ -1,0 +1,31 @@
+#cookie-image {
+  width: 20rem;
+  /* animation: rotation 2s infinite linear; */
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+#cookie-image:hover {
+  width: 450px;
+  transition: 1s;
+}
+
+.rotate {
+  animation: rotation 15s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.counterContainer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5px;
+  /* gap: 20px; */
+}

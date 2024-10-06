@@ -1,0 +1,17 @@
+.upgradeContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  justify-content: space-between;
+  border-style: solid;
+  border-color: peachpuff;
+  border-width: 3px;
+}
+
+.costContainer {
+  width: 80px;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+}
